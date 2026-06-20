@@ -1,0 +1,19 @@
+{
+  "name": "firstbackend",
+  "version": "1.0.0",
+  "description": "1st backend to to practice ",
+  "keywords": [
+    "node"
+  ],
+  "license": "ISC",
+  "author": "nilam kumbhar",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1"
+  }
+}
