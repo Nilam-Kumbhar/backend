@@ -7,4 +7,6 @@ class ApiResponse {
     }
 }
 
+export {ApiResponse}
+
 // statusCode is 3digit error code to request  (not response, success,fail,need more stapes)
