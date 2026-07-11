@@ -17,6 +17,7 @@ const genrateAccessandRefreshTokens = async (userId) =>{
         return {accessToken, refreshToken}
 
     } catch (error) {
+        // console.log(error);
         throw new ApiError(500, "something went wrong while generating refresh and access token.")
     }
 }
@@ -104,7 +105,8 @@ const loginUser = asyncHandler( async (req ,res) => {
     const {email,username,password}= req.body
 
     // username/email is available
-    if (!username || !email){
+    // if(!unsername && !email){}
+    if (!(username || email)){
         throw new ApiError(400,"username or email is required")
     }
 
@@ -160,7 +162,8 @@ const logoutUser = asyncHandler(async(req,res)=>{
             }
         },
         {
-            new: true
+            // new: true  //old mongoose version
+            returnDocument: "after" //new mongoose version
         }
     )
 // cleare cookies
